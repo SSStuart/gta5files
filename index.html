@@ -42,11 +42,11 @@
         details > summary:first-of-type {
             list-style-type: none;
         }
-        details[open] summary {
+        details[open] > summary {
             transition: 0.5s;
             cursor: url('folderClosed.ico'), pointer;
         }
-        details[open] summary {
+        details:not([open]) > summary {
             transition: 0.5s;
             cursor: url('folder.ico'), pointer;
         }
