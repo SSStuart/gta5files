@@ -1,4 +1,4 @@
-# GTA5 Files
+# ![Folder icon](favicon.png) GTA5 Files
 Liste des fichiers du jeu de base, édition Rockstar
 
-Page : https://ssstuart.github.io/gta5files/
+[Page](https://ssstuart.github.io/gta5files/)
