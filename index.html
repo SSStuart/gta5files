@@ -58,6 +58,7 @@
 </head>
 <body>
     <h1>Liste des fichiers de GTA5 (jeu de base - édition Rockstar - 31/05/21)</h1>
+    <span id="filesCount"></span>
     <br><button onclick="develop()">Tout développer</button><button onclick="reduce()">Tout réduire</button><br>
     <details open style="margin-top: 2vh;">
         <summary><span class="folder">Grand Theft Auto V</span></summary>
@@ -665,6 +666,9 @@
         </details>
     </details>
     <script>
+        files = document.getElementsByTagName('file');
+        document.getElementById('filesCount').innerText = files.length+" fichiers";
+        
         details = document.getElementsByTagName('details');
         function develop() {
             for(i=0;i<details.length;i++){
