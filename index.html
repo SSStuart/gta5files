@@ -666,8 +666,38 @@
         </details>
     </details>
     <script>
-        files = document.getElementsByTagName('file');
+        files = document.getElementsByClassName('file');
         document.getElementById('filesCount').innerText = files.length+" fichiers";
+
+        folders = document.getElementsByClassName('folder');
+        for (folder=0; folder<folders.length; folder++) {
+            summary = folders[folder].parentElement;
+            detail = summary.parentElement;
+            summary.title = detail.getElementsByClassName('file').length + " fichiers (Sous-dossiers inclus)";
+            nbDirectFiles = detail.querySelectorAll(":scope > .file").length;
+            nbDirectFolders = detail.querySelectorAll(":scope > details").length;
+
+            var fileCounter = document.createElement("span");
+            folderContent = "";
+            if (nbDirectFiles != 0) {
+                folderContent += nbDirectFiles+" fichier";
+                if(nbDirectFiles > 1) {
+                    folderContent += "s";
+                }
+            }
+            if (nbDirectFolders != 0) {
+                if (nbDirectFiles !=0) {
+                    folderContent += ", "
+                }
+                folderContent += nbDirectFolders+" dossier";
+                if(nbDirectFiles > 1) {
+                    folderContent += "s";
+                }
+            }
+            fileCounter.innerText = folderContent
+            fileCounter.style = "float:right";
+            summary.appendChild(fileCounter);
+        }
         
         details = document.getElementsByTagName('details');
         function develop() {
