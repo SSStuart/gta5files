@@ -1,5 +1,1 @@
-1. cd [CHEMIN DU DOSSIER GTA5]
-
-2. dir /s/b >C:\Users\USERNAME\Desktop\LISTFILES.txt
-
-Changer le nom d'utilisateur ou le chemin complet
+tree "[INSERER EMPLACEMENT DU DOSSIER GTA5]" /F >"[INSERER EMPLACEMENT DU FICHIER DE SORTIE]\LISTFILES.txt"
