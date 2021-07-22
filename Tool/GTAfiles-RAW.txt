@@ -12,6 +12,7 @@ GTAV\GTAVLauncher.exe
 GTAV\index.bin
 GTAV\NvPmApi.Core.win64.dll
 GTAV\PlayGTAV.exe
+GTAV\uninstall.exe
 GTAV\version.txt
 GTAV\x64a.rpf
 GTAV\x64b.rpf
@@ -251,6 +252,8 @@ GTAV\update\x64\dlcpacks\mpsmuggler\dlc.rpf
 GTAV\update\x64\dlcpacks\mpspecialraces\dlc.rpf
 GTAV\update\x64\dlcpacks\mpstunt\dlc.rpf
 GTAV\update\x64\dlcpacks\mpsum\dlc.rpf
+GTAV\update\x64\dlcpacks\mptuner\dlc.rpf
+GTAV\update\x64\dlcpacks\mptuner\dlc1.rpf
 GTAV\update\x64\dlcpacks\mpvalentines2\dlc.rpf
 GTAV\update\x64\dlcpacks\mpvinewood\dlc.rpf
 GTAV\update\x64\dlcpacks\mpxmas_604490\dlc.rpf
@@ -270,6 +273,7 @@ GTAV\update\x64\dlcpacks\patchday21ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday22ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday23ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday24ng\dlc.rpf
+GTAV\update\x64\dlcpacks\patchday25ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday2bng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday2ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday3ng\dlc.rpf
