@@ -768,6 +768,19 @@
         files = document.getElementsByClassName('file');
         document.getElementById('filesCount').innerText = files.length+" fichiers";
         
+        details = document.getElementsByTagName('details');
+        function develop() {
+            for(i=0;i<details.length;i++){
+                details[i].open = true;
+            }
+        }
+
+        function reduce() {
+            for(i=0;i<details.length;i++){
+                details[i].open = false;
+            }
+        }
+        
         develop();
         for (file=0; file<files.length; file++) {
             fileName = files[file].innerText;
@@ -775,6 +788,7 @@
             fileExt = fileName.split('.')[1];
             files[file].innerHTML = "<span class='title'>"+fileTitle+"</span><span class='ext'>."+fileExt+"</span>";
         }
+        reduce();
 
         folders = document.getElementsByClassName('folder');
         for (folder=0; folder<folders.length; folder++) {
@@ -804,19 +818,6 @@
             fileCounter.innerText = folderContent
             fileCounter.style = "float:right";
             summary.appendChild(fileCounter);
-        }
-        
-        details = document.getElementsByTagName('details');
-        function develop() {
-            for(i=0;i<details.length;i++){
-                details[i].open = true;
-            }
-        }
-
-        function reduce() {
-            for(i=0;i<details.length;i++){
-                details[i].open = false;
-            }
         }
     </script>
 </body>
