@@ -1,7 +1,8 @@
 content = ""
-f = open("C:\\Users\\Dubromel Rémy\\Desktop\\GTAfiles.txt", "w")
+f = open("GTAfiles.txt", "w")
 import os
-for root, dirs, files in os.walk('D:\Rockstar\Grand Theft Auto V'):
+racine = input("Emplacement racine (X:/.../GTA5) :")
+for root, dirs, files in os.walk(racine):
      for file in files:
          content += root+"\\"+file+"\n"
          print(root+"\\"+file)
