@@ -24,8 +24,9 @@
         }
         .editions {
             padding: 2vh 2vw;
-            border-left: 4px solid #888;
+            box-shadow: -3px 1px grey;
             border-radius: 10px;
+            margin-block: 20px;
         }
         button {
             font-family: inherit;
@@ -119,7 +120,7 @@
             <h2>Edition Rockstar - jeu de base</h2> <span class="updatedDate" title="UTC +1">Vérifié le 26/04/2022 19h</span>
             <h3 id="filesCount"></h3>
             <br><button onclick="develop()">Tout développer</button><button onclick="reduce()">Tout réduire</button><br>
-            <details open style="margin-top: 2vh;">
+            <details id="main" open style="margin-top: 2vh;">
                 <summary><span class="folder">Grand Theft Auto V</span></summary>
                 <span class="file" title="Grand Theft Auto V\bink2w64.dll">├bink2w64.dll</span><br>
                 <span class="file" title="Grand Theft Auto V\common.rpf">├common.rpf</span><br>
