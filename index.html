@@ -767,13 +767,14 @@
     <script>
         files = document.getElementsByClassName('file');
         document.getElementById('filesCount').innerText = files.length+" fichiers";
-
-        /*for (file=0; file<files.length; file++) {
+        
+        develop();
+        for (file=0; file<files.length; file++) {
             fileName = files[file].innerText;
             fileTitle = fileName.split('.')[0];
             fileExt = fileName.split('.')[1];
             files[file].innerHTML = "<span class='title'>"+fileTitle+"</span><span class='ext'>."+fileExt+"</span>";
-        }*/
+        }
 
         folders = document.getElementsByClassName('folder');
         for (folder=0; folder<folders.length; folder++) {
