@@ -790,6 +790,7 @@
             files[file].innerHTML = "<span class='title'>"+fileTitle+"</span><span class='ext'>."+fileExt+"</span>";
         }
         reduce();
+        document.getElementById('main').open = true;
 
         folders = document.getElementsByClassName('folder');
         for (folder=0; folder<folders.length; folder++) {
