@@ -1,5 +1,4 @@
 GTAV\bink2w64.dll
-GTAV\commandline.txt
 GTAV\common.rpf
 GTAV\d3dcompiler_46.dll
 GTAV\d3dcsx_46.dll
