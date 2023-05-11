@@ -233,6 +233,8 @@ GTAV\update\x64\dlcpacks\mpbiker\dlc.rpf
 GTAV\update\x64\dlcpacks\mpchristmas2\dlc.rpf
 GTAV\update\x64\dlcpacks\mpchristmas2017\dlc.rpf
 GTAV\update\x64\dlcpacks\mpchristmas2018\dlc.rpf
+GTAV\update\x64\dlcpacks\mpchristmas3\dlc.rpf
+GTAV\update\x64\dlcpacks\mpchristmas3_g9ec\dlc.rpf
 GTAV\update\x64\dlcpacks\mpexecutive\dlc.rpf
 GTAV\update\x64\dlcpacks\mpg9ec\dlc.rpf
 GTAV\update\x64\dlcpacks\mpgunrunning\dlc.rpf
@@ -283,6 +285,8 @@ GTAV\update\x64\dlcpacks\patchday25ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday26ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday27g9ecng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday27ng\dlc.rpf
+GTAV\update\x64\dlcpacks\patchday28g9ecng\dlc.rpf
+GTAV\update\x64\dlcpacks\patchday28ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday2bng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday2ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday3ng\dlc.rpf
