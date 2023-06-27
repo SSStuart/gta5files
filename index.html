@@ -97,6 +97,7 @@
             color: #fff;
             font-size: 14px;
             transition: 0.5s;
+            transition-delay: 500ms;
         }
         #comments:hover,
         #comments:focus {
@@ -128,9 +129,9 @@
         <span style="width:100%">Vous pouvez m'envoyer un message sur Discord : SSStuart#0046 ;<br>ou par mail : ssstuart.glunabouli@gmail.com</span>
     </div>
     <section>
-        <h1>Liste des fichiers de GTA5</h1> <small>v1.0.2845.0</small>
+        <h1>Liste des fichiers de GTA5</h1> <small>v1.0.2944.0</small>
         <div class="editions">
-            <h2>Edition Rockstar - jeu de base</h2> <span class="updatedDate" title="UTC +1">Vérifié le 11/05/2023 13h</span>
+            <h2>Edition Rockstar - jeu de base</h2> <span class="updatedDate" title="UTC +1">Vérifié le 27/06/2023 21h</span>
             <h3 id="filesCount"></h3>
             <br><button onclick="develop()">Tout développer</button><button onclick="reduce()">Tout réduire</button><br>
             <details id="main" open style="margin-top: 2vh;">
@@ -425,6 +426,14 @@
                         <details>
                             <summary><span class="folder">│&nbsp;└dlcpacks</span></summary>
                             <details>
+                                <summary><span class="folder">│&nbsp;&nbsp;├mp2023_01</span></summary>
+                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mp2023_01\dlc.rpf">│&nbsp;&nbsp;│└dlc.rpf</span><br>
+                            </details>
+                            <details>
+                                <summary><span class="folder">│&nbsp;&nbsp;├mp2023_01_g9ec</span></summary>
+                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mp2023_01_g9ec\dlc.rpf">│&nbsp;&nbsp;│└dlc.rpf</span><br>
+                            </details>
+                            <details>
                                 <summary><span class="folder">│&nbsp;&nbsp;├mpairraces</span></summary>
                                 <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpairraces\dlc.rpf">│&nbsp;&nbsp;│└dlc.rpf</span><br>
                             </details>
@@ -581,6 +590,14 @@
                             <details> 
                                 <summary><span class="folder">│&nbsp;&nbsp;├mpxmas_604490</span></summary>
                                 <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpxmas_604490\dlc.rpf">│&nbsp;&nbsp;│└dlc.rpf</span><br>
+                            </details>
+                            <details> 
+                                <summary><span class="folder">│&nbsp;&nbsp;├patch2023_01</span></summary>
+                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patch2023_01\dlc.rpf">│&nbsp;&nbsp;│└dlc.rpf</span><br>
+                            </details>
+                            <details> 
+                                <summary><span class="folder">│&nbsp;&nbsp;├patch2023_01_g9ec</span></summary>
+                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patch2023_01_g9ec\dlc.rpf">│&nbsp;&nbsp;│└dlc.rpf</span><br>
                             </details>
                             <details> 
                                 <summary><span class="folder">│&nbsp;&nbsp;├patchday10ng</span></summary>
@@ -804,8 +821,27 @@
             <span class="contribute" onclick="document.getElementById('comments').focus();"><em>Vous avez cette édition ?</em> Contactez-moi pour contribuer en l'ajoutant</span>
         </div>
         <div class="editions">
-            <h2>Edition Epic Games</h2>
-            <span class="contribute" onclick="document.getElementById('comments').focus();"><em>Vous avez cette édition ?</em> Contactez-moi pour contribuer en l'ajoutant</span>
+            <h2>Edition Epic Games</h2> <span class="updatedDate" title="UTC +1">Vérifié le 27/06/2023 21h</span>
+            <!-- <span class="contribute" onclick="document.getElementById('comments').focus();"><em>Vous avez cette édition ?</em> Contactez-moi pour contribuer en l'ajoutant</span> -->
+            <p>Même fichiers que l'édition Rockstar, sauf :</p>
+            <details open>
+                <summary><h3>Fichier en moins</h3></summary>
+                <ul>
+                    <li>GTAVLanguageSelect.exe</li>
+                    <li>GTAVLauncher.exe</li>
+                    <li>index.bin</li>
+                    <li>uninstall.exe</li>
+                </ul>
+            </details>
+            <details open>
+                <summary><h3>Fichier en plus</h3></summary>
+                <ul>
+                    <li>EOSSDK-Win64-Shipping.dll</li>
+                    <li>Redistributables\Rockstar-Games-Epic.exe</li>
+                    <li>Redistributables\Rockstar-Games-Launcher.exe</li>
+                    <li>Redistributables\Social-Club-Setup.exe</li>
+                </ul>
+            </details>
         </div>
         <br><br><span>Créer par SSStuart#0046</span>
         <br><br>

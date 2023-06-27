@@ -34,8 +34,6 @@ GTAV\x64t.rpf
 GTAV\x64u.rpf
 GTAV\x64v.rpf
 GTAV\x64w.rpf
-GTAV\.egstore\F5B4922540B05F8FDAE0D18D678273D2.mancpn
-GTAV\.egstore\F5B4922540B05F8FDAE0D18D678273D2.manifest
 GTAV\ReadMe\Chinese\ReadMe.txt
 GTAV\ReadMe\Chinese(Simplified)\ReadMe.txt
 GTAV\ReadMe\English\ReadMe.txt
@@ -226,6 +224,8 @@ GTAV\update\x64\data\errorcodes\polish.txt
 GTAV\update\x64\data\errorcodes\portuguese.txt
 GTAV\update\x64\data\errorcodes\russian.txt
 GTAV\update\x64\data\errorcodes\spanish.txt
+GTAV\update\x64\dlcpacks\mp2023_01\dlc.rpf
+GTAV\update\x64\dlcpacks\mp2023_01_g9ec\dlc.rpf
 GTAV\update\x64\dlcpacks\mpairraces\dlc.rpf
 GTAV\update\x64\dlcpacks\mpapartment\dlc.rpf
 GTAV\update\x64\dlcpacks\mpassault\dlc.rpf
@@ -235,6 +235,8 @@ GTAV\update\x64\dlcpacks\mpbiker\dlc.rpf
 GTAV\update\x64\dlcpacks\mpchristmas2\dlc.rpf
 GTAV\update\x64\dlcpacks\mpchristmas2017\dlc.rpf
 GTAV\update\x64\dlcpacks\mpchristmas2018\dlc.rpf
+GTAV\update\x64\dlcpacks\mpchristmas3\dlc.rpf
+GTAV\update\x64\dlcpacks\mpchristmas3_g9ec\dlc.rpf
 GTAV\update\x64\dlcpacks\mpexecutive\dlc.rpf
 GTAV\update\x64\dlcpacks\mpg9ec\dlc.rpf
 GTAV\update\x64\dlcpacks\mpgunrunning\dlc.rpf
@@ -265,6 +267,8 @@ GTAV\update\x64\dlcpacks\mptuner\dlc1.rpf
 GTAV\update\x64\dlcpacks\mpvalentines2\dlc.rpf
 GTAV\update\x64\dlcpacks\mpvinewood\dlc.rpf
 GTAV\update\x64\dlcpacks\mpxmas_604490\dlc.rpf
+GTAV\update\x64\dlcpacks\patch2023_01\dlc.rpf
+GTAV\update\x64\dlcpacks\patch2023_01_g9ec\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday10ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday11ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday12ng\dlc.rpf
@@ -285,6 +289,8 @@ GTAV\update\x64\dlcpacks\patchday25ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday26ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday27g9ecng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday27ng\dlc.rpf
+GTAV\update\x64\dlcpacks\patchday28g9ecng\dlc.rpf
+GTAV\update\x64\dlcpacks\patchday28ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday2bng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday2ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday3ng\dlc.rpf
