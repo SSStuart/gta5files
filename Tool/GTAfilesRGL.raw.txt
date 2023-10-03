@@ -2,6 +2,7 @@ GTAV\bink2w64.dll
 GTAV\common.rpf
 GTAV\d3dcompiler_46.dll
 GTAV\d3dcsx_46.dll
+GTAV\fvad.dll
 GTAV\GFSDK_ShadowLib.win64.dll
 GTAV\GFSDK_TXAA.win64.dll
 GTAV\GFSDK_TXAA_AlphaResolve.win64.dll
@@ -10,8 +11,12 @@ GTAV\GTA5.exe
 GTAV\GTAVLanguageSelect.exe
 GTAV\GTAVLauncher.exe
 GTAV\index.bin
+GTAV\libcurl.dll
 GTAV\NvPmApi.Core.win64.dll
+GTAV\opus.dll
+GTAV\opusenc.dll
 GTAV\PlayGTAV.exe
+GTAV\toxmod.dll
 GTAV\uninstall.exe
 GTAV\version.txt
 GTAV\x64a.rpf
