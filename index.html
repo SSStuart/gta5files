@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="auto">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,17 +13,34 @@
     <meta name="description" content="Liste des fichiers de GTA 5">
     <title>GTA 5 Files</title>
     <style>
+        [data-theme="auto"] {
+            color-scheme: light dark;
+        }
+        [data-theme="dark"] {
+            color-scheme: dark;
+        }
+        [data-theme="light"] {
+            color-scheme: light;
+        }
         @media (prefers-color-scheme: dark) {
-            :root {
-                color-scheme: dark;
-            }
-            button, .folder, summary:hover {
+            [data-theme="auto"] button,
+            [data-theme="auto"] .folder,
+            [data-theme="auto"] summary:hover {
                 background-color: #9c730c;
             }
-            details {
+            [data-theme="auto"] details {
+                background-color: #ffffff0d;
+            }
+        }
+        [data-theme="dark"] button,
+        [data-theme="dark"] .folder,
+        [data-theme="dark"] summary:hover {
+            background-color: #9c730c;
+        }
+        [data-theme="dark"] details {
             background-color: #ffffff0d;
         }
-        }
+
         html {
             font-family: monospace;
             cursor: default;
