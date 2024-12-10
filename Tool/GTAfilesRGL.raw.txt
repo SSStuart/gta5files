@@ -49,7 +49,7 @@ GTAV\BattlEye\BEClient_x64.cfg
 GTAV\BattlEye\BEClient_x64.dll
 GTAV\BattlEye\BELauncher.ini
 GTAV\BattlEye\BEServer_x64.cfg
-GTAV\BattlEye\BEServer_x64.cfg
+GTAV\BattlEye\BEServer_x64.dll
 GTAV\BattlEye\BEService_x64.exe
 GTAV\BattlEye\Licenses.txt
 GTAV\BattlEye\EULA\cs.txt
@@ -277,6 +277,8 @@ GTAV\update\x64\dlcpacks\mp2023_02\dlc.rpf
 GTAV\update\x64\dlcpacks\mp2023_02_g9ec\dlc.rpf
 GTAV\update\x64\dlcpacks\mp2024_01\dlc.rpf
 GTAV\update\x64\dlcpacks\mp2024_01_g9ec\dlc.rpf
+GTAV\update\x64\dlcpacks\mp2024_02\dlc.rpf
+GTAV\update\x64\dlcpacks\mp2024_02_g9ec\dlc.rpf
 GTAV\update\x64\dlcpacks\mpairraces\dlc.rpf
 GTAV\update\x64\dlcpacks\mpapartment\dlc.rpf
 GTAV\update\x64\dlcpacks\mpassault\dlc.rpf
@@ -323,6 +325,7 @@ GTAV\update\x64\dlcpacks\patch2023_01_g9ec\dlc.rpf
 GTAV\update\x64\dlcpacks\patch2023_02\dlc.rpf
 GTAV\update\x64\dlcpacks\patch2024_01\dlc.rpf
 GTAV\update\x64\dlcpacks\patch2024_01_g9ec\dlc.rpf
+GTAV\update\x64\dlcpacks\patch2024_02\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday10ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday11ng\dlc.rpf
 GTAV\update\x64\dlcpacks\patchday12ng\dlc.rpf
