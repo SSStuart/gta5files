@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ssstuart.net/APIs/WWWidget.js"></script>
     <link rel="icon" href="pictures/favicon.png">
-    <meta property="og:description" content="Liste des fichiers de GTA 5">
+    <meta property="og:description" content="GTA 5 files list (Rockstar, Epic / Legacy, Enhanced)">
     <meta property="og:title" content="GTA 5 Files">
     <meta name="theme-color" content="#ffaf00">
     <meta name="author" content="SSStuart">
-    <meta name="description" content="Liste des fichiers de GTA 5">
+    <meta name="description" content="GTA 5 files list (Rockstar, Epic / Legacy, Enhanced)">
     <title>GTA 5 Files</title>
     <style>
         [data-theme="auto"] {
@@ -47,7 +47,7 @@
         section {
             padding: 2vw;
         }
-        .editions {
+        .gameEditions, .gameVersionType {
             padding: 2vh 2vw;
             box-shadow: 0 0 2px grey;
             border-radius: 10px;
@@ -55,7 +55,7 @@
         }
         button {
             font-family: inherit;
-            background-color: #e6aa12;
+            background-color: #F1BA58;
             color: #222;
             border: none;
             padding: 5px;
@@ -68,13 +68,16 @@
         .updatedDate {
             float: right;
         }
-        .folder{
-            background-color: #e6aa12;
-            font-weight: bold;
-            padding-right: 10px;
-        }
         details {
+            margin-inline-start: 2ch;
+            margin-block-end: 0.5em;
             background-color: #0000000d;
+        }
+        summary {
+            display: block;
+            background-color: #F1BA5888;
+            font-weight: bold;
+            margin-inline-start: -2ch;
         }
         details > summary:first-of-type {
             list-style-type: none;
@@ -88,7 +91,10 @@
             cursor: url('pictures/folder.ico'), pointer;
         }
         summary:hover {
-            background-color: #e6aa12;
+            background-color: #F1BA58;
+        }
+        .file {
+            display: block;
         }
         .ext {
             font-style: italic;
@@ -103,876 +109,198 @@
             padding: 2px;
             cursor: pointer;
         }
-        
-        #comments {
-            position: fixed;
-            bottom: -38px;
-            left: 0;
-            right: 0;
-            z-index: 2;
-            color: #fff;
-            font-size: 14px;
-            transition: 0.5s;
-            transition-delay: 500ms;
-        }
-        #comments:hover,
-        #comments:focus {
-            bottom: 0;
-            background-color: #68d10080;
-        }
-        #comments > span {
-            background-color: #68d10080;
-            display: inline-block;
-            padding:5px;
-        }
-        #comments:hover > span,
-        #comments:focus > span {
-            background-color: #58b200;
-        }
-        #arrowUp {
-            height: 14px;
-            vertical-align: middle;
-        }
-        #comments:hover #arrowUp, #comments:focus #arrowUp {
-            transform: rotate(180deg);
-        }
     </style>
 
 </head>
 <body>
-    <div id="comments" tabindex="0">
-        <span style="float: left;"><img id="arrowUp" src="pictures/arrow.png"> Commentaire</span><br>
-        <span style="width:100%">Vous pouvez m'envoyer un message sur Discord : ssstuart ;<br>ou par mail : ssstuart.glunabouli[at]gmail.com</span>
-    </div>
     <section>
-        <h1>Liste des fichiers de GTA5</h1> <small>v1.0.3407.0</small>
-        <div class="editions">
-            <h2>Edition Rockstar - jeu de base</h2> <span class="updatedDate" title="UTC +1">Vérifié le 10/12/2024 12h</span>
-            <h3 id="filesCount"></h3>
-            <br><button onclick="develop()">Tout développer</button><button onclick="reduce()">Tout réduire</button><br>
-            <details id="main" open style="margin-top: 2vh;">
-                <summary><span class="folder">Grand Theft Auto V</span></summary>
-                <span class="file" title="Grand Theft Auto V\bink2w64.dll">├ bink2w64.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\common.rpf">├ common.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\d3dcompiler_46.dll">├ d3dcompiler_46.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\d3dcsx_46.dll">├ d3dcsx_46.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\fvad.dll">├ fvad.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\GFSDK_ShadowLib.win64.dll">├ GFSDK_ShadowLib.win64.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\GFSDK_TXAA.win64.dll">├ GFSDK_TXAA.win64.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\GFSDK_TXAA_AlphaResolve.win64.dll">├ GFSDK_TXAA_AlphaResolve.win64.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\GPUPerfAPIDX11-x64.dll">├ GPUPerfAPIDX11-x64.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\GTA5.exe">├ GTA5.exe</span><br>
-                <span class="file" title="Grand Theft Auto V\GTA5_BE.exe">├ GTA5_BE.exe</span><br>
-                <span class="file" title="Grand Theft Auto V\GTAVLanguageSelect.exe">├ GTAVLanguageSelect.exe</span><br>
-                <span class="file" title="Grand Theft Auto V\GTAVLauncher.exe">├ GTAVLauncher.exe</span><br>
-                <span class="file" title="Grand Theft Auto V\index.bin">├ index.bin</span><br>
-                <span class="file" title="Grand Theft Auto V\libcurl.dll">├ libcurl.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\libtox.dll">├ libtox.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\NvPmApi.Core.win64.dll">├ NvPmApi.Core.win64.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\opus.dll">├ opus.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\opusenc.dll">├ opusenc.dll</span><br>
-                <span class="file" title="Grand Theft Auto V\PlayGTAV.exe">├ PlayGTAV.exe</span><br>
-                <span class="file" title="Grand Theft Auto V\title.rgl">├ title.rgl</span><br>
-                <span class="file" title="Grand Theft Auto V\uninstall.exe">├ uninstall.exe</span><br>
-                <span class="file" title="Grand Theft Auto V\version.txt">├ version.txt</span><br>
-                <span class="file" title="Grand Theft Auto V\x64a.rpf">├ x64a.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64b.rpf">├ x64b.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64c.rpf">├ x64c.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64d.rpf">├ x64d.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64e.rpf">├ x64e.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64f.rpf">├ x64f.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64g.rpf">├ x64g.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64h.rpf">├ x64h.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64i.rpf">├ x64i.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64j.rpf">├ x64j.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64k.rpf">├ x64k.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64l.rpf">├ x64l.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64m.rpf">├ x64m.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64n.rpf">├ x64n.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64o.rpf">├ x64o.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64p.rpf">├ x64p.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64q.rpf">├ x64q.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64r.rpf">├ x64r.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64s.rpf">├ x64s.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64t.rpf">├ x64t.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64u.rpf">├ x64u.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64v.rpf">├ x64v.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\x64w.rpf">├ x64w.rpf</span><br>
-                <span class="file" title="Grand Theft Auto V\zlib1.dll">├ zlib1.dll</span><br>
-                <details>
-                    <summary><span class="folder">├┐BattlEye</span></summary>
-                    <span class="file" title="Grand Theft Auto V\BattlEye\BEClient_x64.cfg">│├ BEClient_x64.cfg</span><br>
-                    <span class="file" title="Grand Theft Auto V\BattlEye\BEClient_x64.dll">│├ BEClient_x64.dll</span><br>
-                    <span class="file" title="Grand Theft Auto V\BattlEye\BELauncher.ini">│├ BELauncher.ini</span><br>
-                    <span class="file" title="Grand Theft Auto V\BattlEye\BEServer_x64.cfg">│├ BEServer_x64.cfg</span><br>
-                    <span class="file" title="Grand Theft Auto V\BattlEye\BEServer_x64.cfg">│├ BEServer_x64.cfg</span><br>
-                    <span class="file" title="Grand Theft Auto V\BattlEye\BEService_x64.exe">│├ BEService_x64.exe</span><br>
-                    <span class="file" title="Grand Theft Auto V\BattlEye\Licenses.txt">│├ Licenses.txt</span><br>
-                    <details>
-                        <summary><span class="folder">│├┐EULA</span></summary>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\cs.txt">││├ cs.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\de.txt">││├ de.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\en.txt">││├ en.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\es.txt">││├ es.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\fr.txt">││├ fr.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\it.txt">││├ it.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\ja.txt">││├ ja.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\ko.txt">││├ ko.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\nl.txt">││├ nl.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\pl.txt">││├ pl.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\pt.txt">││├ pt.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\ru.txt">││├ ru.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\tr.txt">││├ tr.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\zh-TW.txt">││├ zh-TW.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\EULA\zh.txt">││└ zh.txt</span><br>
-                    </details>
-                    <details>
-                        <summary><span class="folder">│├┐Privacy</span></summary>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\cs.txt">││├ cs.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\de.txt">││├ de.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\en.txt">││├ en.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\es.txt">││├ es.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\fr.txt">││├ fr.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\it.txt">││├ it.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\ja.txt">││├ ja.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\ko.txt">││├ ko.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\nl.txt">││├ nl.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\pl.txt">││├ pl.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\pt.txt">││├ pt.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\ru.txt">││├ ru.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\tr.txt">││├ tr.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\zh-TW.txt">││├ zh-TW.txt</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Privacy\zh.txt">││└ zh.txt</span><br>
-                    </details>
-                    <details>
-                        <summary><span class="folder">│└┐Text</span></summary>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\cs.ini">│&nbsp;├ cs.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\de.ini">│&nbsp;├ de.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\en.ini">│&nbsp;├ en.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\es.ini">│&nbsp;├ es.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\fr.ini">│&nbsp;├ fr.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\it.ini">│&nbsp;├ it.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\ja.ini">│&nbsp;├ ja.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\ko.ini">│&nbsp;├ ko.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\nl.ini">│&nbsp;├ nl.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\pl.ini">│&nbsp;├ pl.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\pt.ini">│&nbsp;├ pt.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\ru.ini">│&nbsp;├ ru.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\tr.ini">│&nbsp;├ tr.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\zh-TW.ini">│&nbsp;├ zh-TW.ini</span><br>
-                        <span class="file" title="Grand Theft Auto V\BattlEye\Text\zh.ini">│&nbsp;└ zh.ini</span><br>
-                    </details>
+        <h1>GTA 5 files list</h1>
+        <span>For modding purposes mainly</span>
+        <div class="gameEditions" data-edition="RGL">
+            <h2>Rockstar</h2>
+            <div class="gameVersionType" data-version="Legacy">
+                <h3>Legacy</h3> 
+                v <span class="gameVersion"></span> <span class="updatedDate"></span>
+                <h3 class="filesCount"></h3>
+                <button onclick="develop(this)">Open all</button><button onclick="reduce(this)">Collapse all</button><br>
+                <details open style="margin-top: 2vh;">
+                    <summary><span class="folder">Grand Theft Auto V</span></summary>
+                    <!-- GENERATED CONTENT -->
                 </details>
-                <details>
-                    <summary><span class="folder">├┐Redistributables</span></summary>
-                    <details>
-                        <summary><span class="folder">│├┐DirectX</span></summary>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Apr2005_d3dx9_25_x64.cab">││├ Apr2005_d3dx9_25_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Apr2005_d3dx9_25_x86.cab">││├ Apr2005_d3dx9_25_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Apr2006_d3dx9_30_x64.cab">││├ Apr2006_d3dx9_30_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Apr2006_d3dx9_30_x86.cab">││├ Apr2006_d3dx9_30_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Apr2006_MDX1_x86.cab">││├ Apr2006_MDX1_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Apr2006_MDX1_x86_Archive.cab">││├ Apr2006_MDX1_x86_Archive.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Apr2006_XACT_x64.cab">││├ Apr2006_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Apr2006_XACT_x86.cab">││├ Apr2006_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Apr2006_xinput_x64.cab">││├ Apr2006_xinput_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Apr2006_xinput_x86.cab">││├ Apr2006_xinput_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\APR2007_d3dx10_33_x64.cab">││├ APR2007_d3dx10_33_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\APR2007_d3dx10_33_x86.cab">││├ APR2007_d3dx10_33_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\APR2007_d3dx9_33_x64.cab">││├ APR2007_d3dx9_33_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\APR2007_d3dx9_33_x86.cab">││├ APR2007_d3dx9_33_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\APR2007_XACT_x64.cab">││├ APR2007_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\APR2007_XACT_x86.cab">││├ APR2007_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\APR2007_xinput_x64.cab">││├ APR2007_xinput_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\APR2007_xinput_x86.cab">││├ APR2007_xinput_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2005_d3dx9_27_x64.cab">││├ Aug2005_d3dx9_27_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2005_d3dx9_27_x86.cab">││├ Aug2005_d3dx9_27_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\AUG2006_XACT_x64.cab">││├ AUG2006_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\AUG2006_XACT_x86.cab">││├ AUG2006_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\AUG2006_xinput_x64.cab">││├ AUG2006_xinput_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\AUG2006_xinput_x86.cab">││├ AUG2006_xinput_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\AUG2007_d3dx10_35_x64.cab">││├ AUG2007_d3dx10_35_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\AUG2007_d3dx10_35_x86.cab">││├ AUG2007_d3dx10_35_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\AUG2007_d3dx9_35_x64.cab">││├ AUG2007_d3dx9_35_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\AUG2007_d3dx9_35_x86.cab">││├ AUG2007_d3dx9_35_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\AUG2007_XACT_x64.cab">││├ AUG2007_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\AUG2007_XACT_x86.cab">││├ AUG2007_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2008_d3dx10_39_x64.cab">││├ Aug2008_d3dx10_39_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2008_d3dx10_39_x86.cab">││├ Aug2008_d3dx10_39_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2008_d3dx9_39_x64.cab">││├ Aug2008_d3dx9_39_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2008_d3dx9_39_x86.cab">││├ Aug2008_d3dx9_39_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2008_XACT_x64.cab">││├ Aug2008_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2008_XACT_x86.cab">││├ Aug2008_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2008_XAudio_x64.cab">││├ Aug2008_XAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2008_XAudio_x86.cab">││├ Aug2008_XAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_D3DCompiler_42_x64.cab">││├ Aug2009_D3DCompiler_42_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_D3DCompiler_42_x86.cab">││├ Aug2009_D3DCompiler_42_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_d3dcsx_42_x64.cab">││├ Aug2009_d3dcsx_42_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_d3dcsx_42_x86.cab">││├ Aug2009_d3dcsx_42_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_d3dx10_42_x64.cab">││├ Aug2009_d3dx10_42_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_d3dx10_42_x86.cab">││├ Aug2009_d3dx10_42_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_d3dx11_42_x64.cab">││├ Aug2009_d3dx11_42_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_d3dx11_42_x86.cab">││├ Aug2009_d3dx11_42_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_d3dx9_42_x64.cab">││├ Aug2009_d3dx9_42_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_d3dx9_42_x86.cab">││├ Aug2009_d3dx9_42_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_XACT_x64.cab">││├ Aug2009_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_XACT_x86.cab">││├ Aug2009_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_XAudio_x64.cab">││├ Aug2009_XAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Aug2009_XAudio_x86.cab">││├ Aug2009_XAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Dec2005_d3dx9_28_x64.cab">││├ Dec2005_d3dx9_28_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Dec2005_d3dx9_28_x86.cab">││├ Dec2005_d3dx9_28_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\DEC2006_d3dx10_00_x64.cab">││├ DEC2006_d3dx10_00_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\DEC2006_d3dx10_00_x86.cab">││├ DEC2006_d3dx10_00_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\DEC2006_d3dx9_32_x64.cab">││├ DEC2006_d3dx9_32_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\DEC2006_d3dx9_32_x86.cab">││├ DEC2006_d3dx9_32_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\DEC2006_XACT_x64.cab">││├ DEC2006_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\DEC2006_XACT_x86.cab">││├ DEC2006_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\DSETUP.dll">││├ DSETUP.dll</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\dsetup32.dll">││├ dsetup32.dll</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\dxdllreg_x86.cab">││├ dxdllreg_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\DXSETUP.exe">││├ DXSETUP.exe</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\dxupdate.cab">││├ dxupdate.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2005_d3dx9_24_x64.cab">││├ Feb2005_d3dx9_24_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2005_d3dx9_24_x86.cab">││├ Feb2005_d3dx9_24_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2006_d3dx9_29_x64.cab">││├ Feb2006_d3dx9_29_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2006_d3dx9_29_x86.cab">││├ Feb2006_d3dx9_29_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2006_XACT_x64.cab">││├ Feb2006_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2006_XACT_x86.cab">││├ Feb2006_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\FEB2007_XACT_x64.cab">││├ FEB2007_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\FEB2007_XACT_x86.cab">││├ FEB2007_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2010_X3DAudio_x64.cab">││├ Feb2010_X3DAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2010_X3DAudio_x86.cab">││├ Feb2010_X3DAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2010_XACT_x64.cab">││├ Feb2010_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2010_XACT_x86.cab">││├ Feb2010_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2010_XAudio_x64.cab">││├ Feb2010_XAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Feb2010_XAudio_x86.cab">││├ Feb2010_XAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2005_d3dx9_26_x64.cab">││├ Jun2005_d3dx9_26_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2005_d3dx9_26_x86.cab">││├ Jun2005_d3dx9_26_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2006_XACT_x64.cab">││├ JUN2006_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2006_XACT_x86.cab">││├ JUN2006_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2007_d3dx10_34_x64.cab">││├ JUN2007_d3dx10_34_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2007_d3dx10_34_x86.cab">││├ JUN2007_d3dx10_34_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2007_d3dx9_34_x64.cab">││├ JUN2007_d3dx9_34_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2007_d3dx9_34_x86.cab">││├ JUN2007_d3dx9_34_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2007_XACT_x64.cab">││├ JUN2007_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2007_XACT_x86.cab">││├ JUN2007_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2008_d3dx10_38_x64.cab">││├ JUN2008_d3dx10_38_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2008_d3dx10_38_x86.cab">││├ JUN2008_d3dx10_38_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2008_d3dx9_38_x64.cab">││├ JUN2008_d3dx9_38_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2008_d3dx9_38_x86.cab">││├ JUN2008_d3dx9_38_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2008_X3DAudio_x64.cab">││├ JUN2008_X3DAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2008_X3DAudio_x86.cab">││├ JUN2008_X3DAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2008_XACT_x64.cab">││├ JUN2008_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2008_XACT_x86.cab">││├ JUN2008_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2008_XAudio_x64.cab">││├ JUN2008_XAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\JUN2008_XAudio_x86.cab">││├ JUN2008_XAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_D3DCompiler_43_x64.cab">││├ Jun2010_D3DCompiler_43_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_D3DCompiler_43_x86.cab">││├ Jun2010_D3DCompiler_43_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_d3dcsx_43_x64.cab">││├ Jun2010_d3dcsx_43_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_d3dcsx_43_x86.cab">││├ Jun2010_d3dcsx_43_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_d3dx10_43_x64.cab">││├ Jun2010_d3dx10_43_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_d3dx10_43_x86.cab">││├ Jun2010_d3dx10_43_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_d3dx11_43_x64.cab">││├ Jun2010_d3dx11_43_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_d3dx11_43_x86.cab">││├ Jun2010_d3dx11_43_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_d3dx9_43_x64.cab">││├ Jun2010_d3dx9_43_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_d3dx9_43_x86.cab">││├ Jun2010_d3dx9_43_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_XACT_x64.cab">││├ Jun2010_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_XACT_x86.cab">││├ Jun2010_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_XAudio_x64.cab">││├ Jun2010_XAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Jun2010_XAudio_x86.cab">││├ Jun2010_XAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2008_d3dx10_37_x64.cab">││├ Mar2008_d3dx10_37_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2008_d3dx10_37_x86.cab">││├ Mar2008_d3dx10_37_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2008_d3dx9_37_x64.cab">││├ Mar2008_d3dx9_37_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2008_d3dx9_37_x86.cab">││├ Mar2008_d3dx9_37_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2008_X3DAudio_x64.cab">││├ Mar2008_X3DAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2008_X3DAudio_x86.cab">││├ Mar2008_X3DAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2008_XACT_x64.cab">││├ Mar2008_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2008_XACT_x86.cab">││├ Mar2008_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2008_XAudio_x64.cab">││├ Mar2008_XAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2008_XAudio_x86.cab">││├ Mar2008_XAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2009_d3dx10_41_x64.cab">││├ Mar2009_d3dx10_41_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2009_d3dx10_41_x86.cab">││├ Mar2009_d3dx10_41_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2009_d3dx9_41_x64.cab">││├ Mar2009_d3dx9_41_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2009_d3dx9_41_x86.cab">││├ Mar2009_d3dx9_41_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2009_X3DAudio_x64.cab">││├ Mar2009_X3DAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2009_X3DAudio_x86.cab">││├ Mar2009_X3DAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2009_XACT_x64.cab">││├ Mar2009_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2009_XACT_x86.cab">││├ Mar2009_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2009_XAudio_x64.cab">││├ Mar2009_XAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Mar2009_XAudio_x86.cab">││├ Mar2009_XAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2007_d3dx10_36_x64.cab">││├ Nov2007_d3dx10_36_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2007_d3dx10_36_x86.cab">││├ Nov2007_d3dx10_36_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2007_d3dx9_36_x64.cab">││├ Nov2007_d3dx9_36_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2007_d3dx9_36_x86.cab">││├ Nov2007_d3dx9_36_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\NOV2007_X3DAudio_x64.cab">││├ NOV2007_X3DAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\NOV2007_X3DAudio_x86.cab">││├ NOV2007_X3DAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\NOV2007_XACT_x64.cab">││├ NOV2007_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\NOV2007_XACT_x86.cab">││├ NOV2007_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2008_d3dx10_40_x64.cab">││├ Nov2008_d3dx10_40_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2008_d3dx10_40_x86.cab">││├ Nov2008_d3dx10_40_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2008_d3dx9_40_x64.cab">││├ Nov2008_d3dx9_40_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2008_d3dx9_40_x86.cab">││├ Nov2008_d3dx9_40_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2008_X3DAudio_x64.cab">││├ Nov2008_X3DAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2008_X3DAudio_x86.cab">││├ Nov2008_X3DAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2008_XACT_x64.cab">││├ Nov2008_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2008_XACT_x86.cab">││├ Nov2008_XACT_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2008_XAudio_x64.cab">││├ Nov2008_XAudio_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Nov2008_XAudio_x86.cab">││├ Nov2008_XAudio_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Oct2005_xinput_x64.cab">││├ Oct2005_xinput_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\Oct2005_xinput_x86.cab">││├ Oct2005_xinput_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\OCT2006_d3dx9_31_x64.cab">││├ OCT2006_d3dx9_31_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\OCT2006_d3dx9_31_x86.cab">││├ OCT2006_d3dx9_31_x86.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\OCT2006_XACT_x64.cab">││├ OCT2006_XACT_x64.cab</span><br>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\DirectX\OCT2006_XACT_x86.cab">││└ OCT2006_XACT_x86.cab</span><br>
-                    </details>
-                    <details>
-                        <summary><span class="folder">│└┐VCRed</span></summary>
-                        <span class="file" title="Grand Theft Auto V\Redistributables\VCRed\vcredist_x86.exe">│&nbsp;└ vcredist_x86.exe</span><br>
-                    </details>
+            </div>
+            <div class="gameVersionType" data-version="Enhanced">
+                <h3>Enhanced</h3> 
+                v <span class="gameVersion"></span> <span class="updatedDate"></span>
+                <h3 class="filesCount"></h3>
+                <button onclick="develop(this)">Open all</button><button onclick="reduce(this)">Collapse all</button><br>
+                <details open style="margin-top: 2vh;">
+                    <summary><span class="folder">Grand Theft Auto V</span></summary>
+                    <!-- GENERATED CONTENT -->
                 </details>
-                <details>
-                    <summary><span class="folder">├┐update</span></summary>
-                    <span class="file" title="Grand Theft Auto V\update\update.rpf">│├ update.rpf</span><br>
-                    <span class="file" title="Grand Theft Auto V\update\update2.rpf">│├ update2.rpf</span><br>
-                    <details>
-                        <summary><span class="folder">│└┐x64</span></summary>
-                        <span class="file" title="Grand Theft Auto V\update\x64\metadata.dat">│&nbsp;├ metadata.dat</span><br>
-                        <details>
-                            <summary><span class="folder">│&nbsp;├┐data</span></summary>
-                            <details>
-                                <summary><span class="folder">│&nbsp;│└┐errorcodes</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\american.txt">│&nbsp;│&nbsp;├ american.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\chinese.txt">│&nbsp;│&nbsp;├ chinese.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\chinesesimp.txt">│&nbsp;│&nbsp;├ chinesesimp.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\french.txt">│&nbsp;│&nbsp;├ french.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\german.txt">│&nbsp;│&nbsp;├ german.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\italian.txt">│&nbsp;│&nbsp;├ italian.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\japanese.txt">│&nbsp;│&nbsp;├ japanese.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\korean.txt">│&nbsp;│&nbsp;├ korean.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\mexican.txt">│&nbsp;│&nbsp;├ mexican.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\polish.txt">│&nbsp;│&nbsp;├ polish.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\portuguese.txt">│&nbsp;│&nbsp;├ portuguese.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\russian.txt">│&nbsp;│&nbsp;├ russian.txt</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\data\errorcodes\spanish.txt">│&nbsp;│&nbsp;└ spanish.txt</span><br>
-                            </details>
-                        </details>
-                        <details>
-                            <summary><span class="folder">│&nbsp;└┐dlcpacks</span></summary>
-                            <details>
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mp2023_01</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mp2023_01\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details>
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mp2023_01_g9ec</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mp2023_01_g9ec\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details>
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mp2023_02</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mp2023_02\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details>
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mp2023_02_g9ec</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mp2023_02_g9ec\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details>
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mp2024_01</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mp2024_01\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details>
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mp2024_01_g9ec</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mp2024_01_g9ec\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details>
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mp2024_02</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mp2024_02\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details>
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mp2024_02_g9ec</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mp2024_02_g9ec\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details>
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpairraces</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpairraces\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpapartment</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpapartment\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpassault</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpassault\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpbattle</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpbattle\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpbattle</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpbattle\dlc1.rpf">│&nbsp;&nbsp;│└ dlc1.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpbiker</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpbiker\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpchristmas2</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpchristmas2\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpchristmas2017</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpchristmas2017\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpchristmas2018</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpchristmas2018\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpchristmas3</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpchristmas3\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpchristmas3_g9ec</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpchristmas3_g9ec\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpexecutive</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpexecutive\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpg9ec</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpg9ec\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpgunrunning</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpgunrunning\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mphalloween</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mphalloween\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpheist</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpheist\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpheist3</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpheist3\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpheist4</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpheist4\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpheist4</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpheist4\dlc1.rpf">│&nbsp;&nbsp;│└ dlc1.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpheist4</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpheist4\dlc2.rpf">│&nbsp;&nbsp;│└ dlc2.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpimportexport</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpimportexport\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpjanuary2016</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpjanuary2016\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mplowrider</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mplowrider\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mplowrider2</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mplowrider2\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpluxe</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpluxe\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpluxe2</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpluxe2\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mppatchesng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mppatchesng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpreplay</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpreplay\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                             <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpsecurity</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpsecurity\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpsecurity\dlc1.rpf">│&nbsp;&nbsp;│└ dlc1.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpsmuggler</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpsmuggler\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpspecialraces</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpspecialraces\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpstunt</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpstunt\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpsum</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpsum\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpsum2</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpsum2\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpsum2_g9ec</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpsum2_g9ec\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mptuner</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mptuner\dlc.rpf">│&nbsp;&nbsp;│├ dlc.rpf</span><br>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mptuner\dlc1.rpf">│&nbsp;&nbsp;│└ dlc1.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpvalentines2</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpvalentines2\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpvinewood</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpvinewood\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐mpxmas_604490</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\mpxmas_604490\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patch2023_01</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patch2023_01\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patch2023_01_g9ec</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patch2023_01_g9ec\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patch2023_02</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patch2023_02\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patch2024_01</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patch2024_01\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patch2024_01_g9ec</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patch2024_01_g9ec\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patch2024_02</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patch2024_02\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday10ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday10ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday11ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday11ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday12ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday12ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday13ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday13ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday14ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday14ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday15ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday15ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday16ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday16ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday17ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday17ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday18ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday18ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday19ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday19ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday1ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday1ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday20ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday20ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday21ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday21ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday22ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday22ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday23ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday23ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday24ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday24ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday25ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday25ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday26ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday26ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday27g9ecng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday27g9ecng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday27ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday27ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday28g9ecng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday28g9ecng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday28ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday28ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday2bng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday2bng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday2ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday2ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday3ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday3ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday4ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday4ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday5ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday5ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday6ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday6ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday7ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday7ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday8ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday8ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;├┐patchday9ng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchday9ng\dlc.rpf">│&nbsp;&nbsp;│└ dlc.rpf</span><br>
-                            </details>
-                            <details> 
-                                <summary><span class="folder">│&nbsp;&nbsp;└┐patchdayg9ecng</span></summary>
-                                <span class="file" title="Grand Theft Auto V\update\x64\dlcpacks\patchdayg9ecng\dlc.rpf">│&nbsp;&nbsp;&nbsp;└ dlc.rpf</span><br>
-                            </details>
-                        </details>
-                    </details>
-                </details>
-                <details>
-                    <summary><span class="folder">└┐x64</span></summary>
-                    <span class="file" title="Grand Theft Auto V\x64\metadata.dat">&nbsp;├ metadata.dat</span><br>
-                    <details>
-                        <summary><span class="folder">&nbsp;├┐audio</span></summary>
-                        <span class="file" title="Grand Theft Auto V\x64\audio\audio_rel.rpf">&nbsp;│├ audio_rel.rpf</span><br>
-                        <span class="file" title="Grand Theft Auto V\x64\audio\occlusion.rpf">&nbsp;│├ occlusion.rpf</span><br>
-                        <details>
-                            <summary><span class="folder">&nbsp;│└┐sfx</span></summary>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\ANIMALS.rpf">&nbsp;│&nbsp;├ ANIMALS.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\ANIMALS_FAR.rpf">&nbsp;│&nbsp;├ ANIMALS_FAR.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\ANIMALS_NEAR.rpf">&nbsp;│&nbsp;├ ANIMALS_NEAR.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\CUTSCENE_MASTERED_ONLY.rpf">&nbsp;│&nbsp;├ CUTSCENE_MASTERED_ONLY.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\DLC_GTAO.rpf">&nbsp;│&nbsp;├ DLC_GTAO.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\INTERACTIVE_MUSIC.rpf">&nbsp;│&nbsp;├ INTERACTIVE_MUSIC.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\ONESHOT_AMBIENCE.rpf">&nbsp;│&nbsp;├ ONESHOT_AMBIENCE.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\PAIN.rpf">&nbsp;│&nbsp;├ PAIN.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\POLICE_SCANNER.rpf">&nbsp;│&nbsp;├ POLICE_SCANNER.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\PROLOGUE.rpf">&nbsp;│&nbsp;├ PROLOGUE.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_01_CLASS_ROCK.rpf">&nbsp;│&nbsp;├ RADIO_01_CLASS_ROCK.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_02_POP.rpf">&nbsp;│&nbsp;├ RADIO_02_POP.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_03_HIPHOP_NEW.rpf">&nbsp;│&nbsp;├ RADIO_03_HIPHOP_NEW.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_04_PUNK.rpf">&nbsp;│&nbsp;├ RADIO_04_PUNK.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_05_TALK_01.rpf">&nbsp;│&nbsp;├ RADIO_05_TALK_01.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_06_COUNTRY.rpf">&nbsp;│&nbsp;├ RADIO_06_COUNTRY.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_07_DANCE_01.rpf">&nbsp;│&nbsp;├ RADIO_07_DANCE_01.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_08_MEXICAN.rpf">&nbsp;│&nbsp;├ RADIO_08_MEXICAN.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_09_HIPHOP_OLD.rpf">&nbsp;│&nbsp;├ RADIO_09_HIPHOP_OLD.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_11_TALK_02.rpf">&nbsp;│&nbsp;├ RADIO_11_TALK_02.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_12_REGGAE.rpf">&nbsp;│&nbsp;├ RADIO_12_REGGAE.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_13_JAZZ.rpf">&nbsp;│&nbsp;├ RADIO_13_JAZZ.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_14_DANCE_02.rpf">&nbsp;│&nbsp;├ RADIO_14_DANCE_02.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_15_MOTOWN.rpf">&nbsp;│&nbsp;├ RADIO_15_MOTOWN.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_16_SILVERLAKE.rpf">&nbsp;│&nbsp;├ RADIO_16_SILVERLAKE.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_17_FUNK.rpf">&nbsp;│&nbsp;├ RADIO_17_FUNK.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_18_90S_ROCK.rpf">&nbsp;│&nbsp;├ RADIO_18_90S_ROCK.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_ADVERTS.rpf">&nbsp;│&nbsp;├ RADIO_ADVERTS.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RADIO_NEWS.rpf">&nbsp;│&nbsp;├ RADIO_NEWS.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\RESIDENT.rpf">&nbsp;│&nbsp;├ RESIDENT.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\SCRIPT.rpf">&nbsp;│&nbsp;├ SCRIPT.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\SS_AC.rpf">&nbsp;│&nbsp;├ SS_AC.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\SS_DE.rpf">&nbsp;│&nbsp;├ SS_DE.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\SS_FF.rpf">&nbsp;│&nbsp;├ SS_FF.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\SS_GM.rpf">&nbsp;│&nbsp;├ SS_GM.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\SS_NP.rpf">&nbsp;│&nbsp;├ SS_NP.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\SS_QR.rpf">&nbsp;│&nbsp;├ SS_QR.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\SS_ST.rpf">&nbsp;│&nbsp;├ SS_ST.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\SS_UZ.rpf">&nbsp;│&nbsp;├ SS_UZ.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\STREAMED_AMBIENCE.rpf">&nbsp;│&nbsp;├ STREAMED_AMBIENCE.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\STREAMED_VEHICLES.rpf">&nbsp;│&nbsp;├ STREAMED_VEHICLES.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\STREAMED_VEHICLES_GRANULAR.rpf">&nbsp;│&nbsp;├ STREAMED_VEHICLES_GRANULAR.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\STREAMED_VEHICLES_GRANULAR_NPC.rpf">&nbsp;│&nbsp;├ STREAMED_VEHICLES_GRANULAR_NPC.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\STREAMED_VEHICLES_LOW_LATENCY.rpf">&nbsp;│&nbsp;├ STREAMED_VEHICLES_LOW_LATENCY.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\STREAMS.rpf">&nbsp;│&nbsp;├ STREAMS.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\S_FULL_AMB_F.rpf">&nbsp;│&nbsp;├ S_FULL_AMB_F.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\S_FULL_AMB_M.rpf">&nbsp;│&nbsp;├ S_FULL_AMB_M.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\S_FULL_GAN.rpf">&nbsp;│&nbsp;├ S_FULL_GAN.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\S_FULL_SER.rpf">&nbsp;│&nbsp;├ S_FULL_SER.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\S_MINI_AMB.rpf">&nbsp;│&nbsp;├ S_MINI_AMB.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\S_MINI_GAN.rpf">&nbsp;│&nbsp;├ S_MINI_GAN.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\S_MINI_SER.rpf">&nbsp;│&nbsp;├ S_MINI_SER.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\S_MISC.rpf">&nbsp;│&nbsp;├ S_MISC.rpf</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\audio\sfx\WEAPONS_PLAYER.rpf">&nbsp;│&nbsp;└ WEAPONS_PLAYER.rpf</span><br>
-                        </details>
-                    </details>
-                    <details>
-                        <summary><span class="folder">&nbsp;└┐data</span></summary>
-                        <details>
-                            <summary><span class="folder">&nbsp;&nbsp;└┐errorcodes</span></summary>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\american.txt">&nbsp;&nbsp;&nbsp;├ american.txt</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\chinese.txt">&nbsp;&nbsp;&nbsp;├ chinese.txt</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\french.txt">&nbsp;&nbsp;&nbsp;├ french.txt</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\german.txt">&nbsp;&nbsp;&nbsp;├ german.txt</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\italian.txt">&nbsp;&nbsp;&nbsp;├ italian.txt</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\japanese.txt">&nbsp;&nbsp;&nbsp;├ japanese.txt</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\korean.txt">&nbsp;&nbsp;&nbsp;├ korean.txt</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\mexican.txt">&nbsp;&nbsp;&nbsp;├ mexican.txt</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\polish.txt">&nbsp;&nbsp;&nbsp;├ polish.txt</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\portuguese.txt">&nbsp;&nbsp;&nbsp;├ portuguese.txt</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\russian.txt">&nbsp;&nbsp;&nbsp;├ russian.txt</span><br>
-                            <span class="file" title="Grand Theft Auto V\x64\data\errorcodes\spanish.txt">&nbsp;&nbsp;&nbsp;└ spanish.txt</span><br>
-                        </details>
-                    </details>
-                </details>
-            </details>
+            </div>
         </div>
-        <div class="editions">
+        <div class="gameEditions">
             <h2>Edition Steam</h2>
-            <span class="contribute" onclick="document.getElementById('comments').focus();"><em>Vous avez cette édition ?</em> Contactez-moi pour contribuer en l'ajoutant</span>
+            <a href="#WWWidgetMailBtn"><em>Vous avez cette édition ?</em> Contactez-moi pour contribuer en l'ajoutant</a>
         </div>
-        <div class="editions">
-            <h2>Edition Epic Games</h2> <span class="updatedDate" title="UTC +1">Vérifié le 02/07/2024 10h</span>
-            <!-- <span class="contribute" onclick="document.getElementById('comments').focus();"><em>Vous avez cette édition ?</em> Contactez-moi pour contribuer en l'ajoutant</span> -->
-            <p>Même fichiers que l'édition Rockstar, sauf :</p>
-            <details open>
-                <summary><h3>Fichier en moins</h3></summary>
-                <ul>
-                    <li>GTAVLanguageSelect.exe</li>
-                    <li>GTAVLauncher.exe</li>
-                    <li>index.bin</li>
-                    <li>uninstall.exe</li>
-                </ul>
-            </details>
-            <details open>
-                <summary><h3>Fichier en plus</h3></summary>
-                <ul>
-                    <li>EOSSDK-Win64-Shipping.dll</li>
-                    <li>Redistributables\Rockstar-Games-Epic.exe</li>
-                    <li>Redistributables\Rockstar-Games-Launcher.exe</li>
-                    <li>Redistributables\Social-Club-Setup.exe</li>
-                    <li>toxmod.dll</li>
-                </ul>
-            </details>
+
+
+        <div class="gameEditions" data-edition="EGS">
+            <h2>Epic Games</h2>
+            <div class="gameVersionType" data-version="Legacy">
+                <h3>Legacy</h3> 
+                v <span class="gameVersion"></span> <span class="updatedDate"></span>
+                <h3 class="filesCount"></h3>
+                <button onclick="develop(this)">Open all</button><button onclick="reduce(this)">Collapse all</button><br>
+                <details open style="margin-top: 2vh;">
+                    <summary><span class="folder">Grand Theft Auto V</span></summary>
+                    <!-- GENERATED CONTENT -->
+                </details>
+            </div>
+            <div class="gameVersionType" data-version="Enhanced">
+                <h3>Enhanced</h3> 
+                v <span class="gameVersion"></span> <span class="updatedDate"></span>
+                <h3 class="filesCount"></h3>
+                <button onclick="develop(this)">Open all</button><button onclick="reduce(this)">Collapse all</button><br>
+                <details open style="margin-top: 2vh;">
+                    <summary><span class="folder">Grand Theft Auto V</span></summary>
+                    <!-- GENERATED CONTENT -->
+                </details>
+            </div>
         </div>
     </section>
+
     <script>
-        files = document.getElementsByClassName('file');
-        document.getElementById('filesCount').innerText = files.length+" fichiers";
-        
-        details = document.getElementById("main").getElementsByTagName('details');
-        function develop() {
+        var newScript = document.createElement('script');
+		newScript.type = 'text/javascript';
+		newScript.src = './filesList.js?reload='+Date.now();
+		document.getElementsByTagName('head')[0].appendChild(newScript);
+    </script>
+    <script>
+        function develop(version) {
+            let details = version.parentElement.getElementsByTagName("details");
             for(i=0;i<details.length;i++){
                 details[i].open = true;
             }
         }
 
-        function reduce() {
+        function reduce(version) {
+            let details = version.parentElement.getElementsByTagName("details");
             for(i=0;i<details.length;i++){
                 details[i].open = false;
             }
         }
-        
-        develop();
-        for (file=0; file<files.length; file++) {
-            fileName = files[file].innerText;
-            fileTitle = fileName.split('.')[0];
-            fileExt = fileName.split('.')[1];
-            files[file].innerHTML = "<span class='title'>"+fileTitle+"</span><span class='ext'>."+fileExt+"</span>";
+
+        function treeLine(level = 0, isADirectory = false) {
+            spaces = "";
+            for (let index = 0; index < (isADirectory ? level-1 : level); index++) {
+                spaces+= "│";
+            }
+            if (isADirectory)
+                spaces += "├┐";
+            else
+                spaces += "├";
+            return spaces;
         }
-        reduce();
-        document.getElementById('main').open = true;
 
-        folders = document.getElementsByClassName('folder');
-        for (folder=0; folder<folders.length; folder++) {
-            summary = folders[folder].parentElement;
-            detail = summary.parentElement;
-            summary.title = detail.getElementsByClassName('file').length + " fichiers (Sous-dossiers inclus)";
-            nbDirectFiles = detail.querySelectorAll(":scope > .file").length;
-            nbDirectFolders = detail.querySelectorAll(":scope > details").length;
+        function generateFileList(sourceDatas, edition, version) {
+            document.querySelector(`[data-edition="${edition}"] [data-version="${version}"] .gameVersion`).innerText = sourceDatas["version"];
+            document.querySelector(`[data-edition="${edition}"] [data-version="${version}"] .updatedDate`).innerText = sourceDatas["data_updated_at"].toLocaleDateString() +" - "+ sourceDatas["data_updated_at"].toLocaleTimeString();
+            document.querySelector(`[data-edition="${edition}"] [data-version="${version}"] .filesCount`).innerText = sourceDatas["files"].length + " files";
 
-            var fileCounter = document.createElement("span");
-            folderContent = "";
-            if (nbDirectFiles != 0) {
-                folderContent += nbDirectFiles+" fichier";
-                if(nbDirectFiles > 1) {
-                    folderContent += "s";
+            let relativePath = "";
+            let targetDetail =  document.querySelector(`[data-edition="${edition}"] [data-version="${version}"] details`);
+            for (const filePath of sourceDatas["files"]) {
+                let filePathSplit = filePath.split("/");
+                let fileName = filePathSplit.at(-1).slice(0, filePathSplit.at(-1).lastIndexOf("."));
+                let fileExt = filePathSplit.at(-1).slice(filePathSplit.at(-1).lastIndexOf("."));
+                if (relativePath + filePathSplit.at(-1) == filePath) {
+                    let newFile = document.createElement("span");
+                    newFile.classList.add("file");
+                    newFile.title = "Grand Theft Auto V/"+filePath;
+                    newFile.innerHTML = `<div class="treeLine"></div> <span class="title">${fileName}</span><span class="ext">${fileExt}</span></span>`;
+
+                    targetDetail.appendChild(newFile);
+                } else {
+                    let oldLevel = (relativePath.slice(0, -1).split("/").length > 1 && relativePath.split("/")[1] != "" ? relativePath.slice(0, -1).split("/").length : (relativePath != "" ? 1 : 0));
+                    let newLevel = filePathSplit.length - 1;
+                    let oldDir = (relativePath.slice(0, -1).split("/").length > 1 && relativePath.split("/")[1] != "" ? (relativePath.slice(0, -1).slice(relativePath.slice(0, -1).lastIndexOf("/") +1) + "/") : relativePath);
+                    let newDir = filePathSplit.at(-2) + "/";
+                    do {
+                        if (oldLevel < newLevel && filePath.includes(relativePath)) {
+                            for (let lvl = oldLevel; lvl < newLevel; lvl++) {
+                                let folderName = filePathSplit[lvl];
+                                let newFolder = document.createElement("details");
+                                newFolder.classList.add("folderCont");
+                                newFolder.innerHTML = `<summary><div class="treeLine"></div> <span class="folder">${folderName}</span></summary>`;
+                                targetDetail.appendChild(newFolder);
+                                targetDetail = newFolder;
+                            }
+                            relativePath = filePath.slice(0, filePath.lastIndexOf("/") + 1);
+                        }
+                        oldLevel = (relativePath.slice(0, -1).split("/").length > 1 && relativePath.split("/")[1] != "" ? relativePath.slice(0, -1).split("/").length : (relativePath != "" ? 1 : 0));
+                        oldDir = (relativePath.slice(0, -1).split("/").length > 1 && relativePath.split("/")[1] != "" ? (relativePath.slice(0, -1).slice(relativePath.slice(0, -1).lastIndexOf("/") +1) + "/") : relativePath);
+                        if (oldLevel > newLevel || oldDir != newDir) {
+                            targetDetail = targetDetail.parentElement;
+                            relativePath = relativePath.slice(0, -1).slice(0, relativePath.slice(0, -1).lastIndexOf("/") + 1);
+                        }
+                        
+                        oldLevel = (relativePath.slice(0, -1).split("/").length > 1 && relativePath.split("/")[1] != "" ? relativePath.slice(0, -1).split("/").length : (relativePath != "" ? 1 : 0));
+                        oldDir = (relativePath.slice(0, -1).split("/").length > 1 && relativePath.split("/")[1] != "" ? (relativePath.slice(0, -1).slice(relativePath.slice(0, -1).lastIndexOf("/") +1) + "/") : relativePath);
+                    } while (oldDir != newDir || relativePath + filePathSplit.at(-1) != filePath);
+
+                    let newFile = document.createElement("span");
+                    newFile.classList.add("file");
+                    newFile.title = "Grand Theft Auto V/"+filePath;
+                    newFile.innerHTML = `<div class="treeLine"></div> <span class="title">${fileName}</span><span class="ext">${fileExt}</span></span>`;
+
+                    targetDetail.appendChild(newFile);
                 }
             }
-            if (nbDirectFolders != 0) {
-                if (nbDirectFiles !=0) {
-                    folderContent += ", "
+        }
+
+        function countFiles() {
+            folders = document.getElementsByClassName('folder');
+            for (folder=0; folder<folders.length; folder++) {
+                summary = folders[folder].parentElement;
+                detail = summary.parentElement;
+                summary.title = detail.getElementsByClassName('file').length + " files (including sub-folders)";
+                nbDirectFiles = detail.querySelectorAll(":scope > .file").length;
+                nbDirectFolders = detail.querySelectorAll(":scope > details").length;
+
+                var fileCounter = document.createElement("span");
+                folderContent = "";
+                if (nbDirectFiles != 0) {
+                    folderContent += nbDirectFiles+"📄";
                 }
-                folderContent += nbDirectFolders+" dossier";
-                if(nbDirectFiles > 1) {
-                    folderContent += "s";
+                if (nbDirectFolders != 0) {
+                    if (nbDirectFiles !=0) {
+                        folderContent += " "
+                    }
+                    folderContent += nbDirectFolders+"📁";
                 }
+                fileCounter.innerText = folderContent
+                fileCounter.style = "float:right";
+                summary.appendChild(fileCounter);
             }
-            fileCounter.innerText = folderContent
-            fileCounter.style = "float:right";
-            summary.appendChild(fileCounter);
+        }
+
+        if (document.readyState != "complete") {
+            window.addEventListener("load", () => {
+                generateFileList(FILES["RGL"]["Legacy"], "RGL", "Legacy");
+                generateFileList(FILES["RGL"]["Enhanced"], "RGL", "Enhanced");
+                generateFileList(FILES["EGS"]["Legacy"], "EGS", "Legacy");
+                generateFileList(FILES["EGS"]["Enhanced"], "EGS", "Enhanced");
+
+                countFiles();
+            });
+        } else {
+            generateFileList(FILES["RGL"]["Legacy"], "RGL", "Legacy");
+            generateFileList(FILES["RGL"]["Enhanced"], "RGL", "Enhanced");
+            generateFileList(FILES["EGS"]["Legacy"], "EGS", "Legacy");
+            generateFileList(FILES["EGS"]["Enhanced"], "EGS", "Enhanced");
+
+            countFiles();
         }
     </script>
 </body>
