@@ -13,6 +13,9 @@
     <meta name="description" content="GTA 5 files list (Rockstar, Epic / Legacy, Enhanced)">
     <title>GTA 5 Files</title>
     <style>
+        :root {
+            scroll-behavior: smooth;
+        }
         [data-theme="auto"] {
             color-scheme: light dark;
         }
@@ -115,11 +118,29 @@
 <body>
     <section>
         <h1>GTA 5 files list</h1>
-        <span>For modding purposes mainly</span>
+        <span>For modding purposes</span>
+        <nav>
+            <ul>
+                <li>Rockstar Games</li>
+                <ul>
+                    <li><a href="#RGL_Legacy">Legacy</a></li>
+                    <li><a href="#RGL_Enhanced">Enhanced</a></li>
+                </ul>
+                <li>Steam</li>
+                <ul>
+                    <li><a href="#Steam">Unavailable</a></li>
+                </ul>
+                <li>Epic Games</li>
+                <ul>
+                    <li><a href="#EGS_Legacy">Legacy</a></li>
+                    <li><a href="#EGS_Enhanced">Enhanced</a></li>
+                </ul>
+            </ul>
+        </nav>
         <div class="gameEditions" data-edition="RGL">
             <h2>Rockstar</h2>
             <div class="gameVersionType" data-version="Legacy">
-                <h3>Legacy</h3> 
+                <h3 id="RGL_Legacy">Legacy</h3> 
                 v <span class="gameVersion"></span> <span class="updatedDate"></span>
                 <h3 class="filesCount"></h3>
                 <button onclick="develop(this)">Open all</button><button onclick="reduce(this)">Collapse all</button><br>
@@ -129,7 +150,7 @@
                 </details>
             </div>
             <div class="gameVersionType" data-version="Enhanced">
-                <h3>Enhanced</h3> 
+                <h3 id="RGL_Enhanced">Enhanced</h3> 
                 v <span class="gameVersion"></span> <span class="updatedDate"></span>
                 <h3 class="filesCount"></h3>
                 <button onclick="develop(this)">Open all</button><button onclick="reduce(this)">Collapse all</button><br>
@@ -140,15 +161,15 @@
             </div>
         </div>
         <div class="gameEditions">
-            <h2>Edition Steam</h2>
-            <a href="#WWWidgetMailBtn"><em>Vous avez cette édition ?</em> Contactez-moi pour contribuer en l'ajoutant</a>
+            <h2 id="Steam">Steam</h2>
+            <a href="#WWWidgetMailBtn"><em>You have this edition?</em> Contact me to contribute by providing the missing data</a>
         </div>
 
 
         <div class="gameEditions" data-edition="EGS">
             <h2>Epic Games</h2>
             <div class="gameVersionType" data-version="Legacy">
-                <h3>Legacy</h3> 
+                <h3 id="EGS_Legacy">Legacy</h3> 
                 v <span class="gameVersion"></span> <span class="updatedDate"></span>
                 <h3 class="filesCount"></h3>
                 <button onclick="develop(this)">Open all</button><button onclick="reduce(this)">Collapse all</button><br>
@@ -158,7 +179,7 @@
                 </details>
             </div>
             <div class="gameVersionType" data-version="Enhanced">
-                <h3>Enhanced</h3> 
+                <h3 id="EGS_Enhanced">Enhanced</h3> 
                 v <span class="gameVersion"></span> <span class="updatedDate"></span>
                 <h3 class="filesCount"></h3>
                 <button onclick="develop(this)">Open all</button><button onclick="reduce(this)">Collapse all</button><br>
