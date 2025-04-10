@@ -1,7 +1,6 @@
 amd_ags_x64.dll
 amd_fidelityfx_dx12.dll
 bink2w64.dll
-checksums_tu.txt
 common.rpf
 dstorage.dll
 dstoragecore.dll
@@ -262,6 +261,21 @@ Redistributables\DirectX\OCT2006_XACT_x86.cab
 Redistributables\VCRed\vcredist_x86.exe
 update\update.rpf
 update\update2.rpf
+update\x64\metadata.dat
+update\x64\data\errorcodes\american.txt
+update\x64\data\errorcodes\chinese.txt
+update\x64\data\errorcodes\chinesesimp.txt
+update\x64\data\errorcodes\french.txt
+update\x64\data\errorcodes\german.txt
+update\x64\data\errorcodes\GLOBAL.txt
+update\x64\data\errorcodes\italian.txt
+update\x64\data\errorcodes\japanese.txt
+update\x64\data\errorcodes\korean.txt
+update\x64\data\errorcodes\mexican.txt
+update\x64\data\errorcodes\polish.txt
+update\x64\data\errorcodes\portuguese.txt
+update\x64\data\errorcodes\russian.txt
+update\x64\data\errorcodes\spanish.txt
 update\x64\dlcpacks\mp2023_01\dlc.rpf
 update\x64\dlcpacks\mp2023_01_G9EC\dlc.rpf
 update\x64\dlcpacks\mp2023_02\dlc.rpf
@@ -408,6 +422,7 @@ x64\audio\sfx\S_MISC.rpf
 x64\audio\sfx\WEAPONS_PLAYER.rpf
 x64\data\errorcodes\american.txt
 x64\data\errorcodes\chinese.txt
+x64\data\errorcodes\chinesesimp.txt
 x64\data\errorcodes\french.txt
 x64\data\errorcodes\german.txt
 x64\data\errorcodes\italian.txt

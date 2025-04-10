@@ -44,6 +44,7 @@ x64t.rpf
 x64u.rpf
 x64v.rpf
 x64w.rpf
+XCurl.dll
 zlib1.dll
 BattlEye\BEClient_x64.cfg
 BattlEye\BEClient_x64.dll
@@ -417,6 +418,7 @@ x64\audio\sfx\S_MISC.rpf
 x64\audio\sfx\WEAPONS_PLAYER.rpf
 x64\data\errorcodes\american.txt
 x64\data\errorcodes\chinese.txt
+x64\data\errorcodes\chinesesimp.txt
 x64\data\errorcodes\french.txt
 x64\data\errorcodes\german.txt
 x64\data\errorcodes\italian.txt
