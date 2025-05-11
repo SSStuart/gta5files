@@ -1,8 +1,8 @@
 const FILES = {
 	"RGL": {
 		"Legacy": {
-			"version": "1.0.3504.0",
-			"data_updated_at": new Date("2025-04-10T13:00:00+01:00"),
+			"version": "1.0.3521.0",
+			"data_updated_at": new Date("2025-05-11T21:00:00+01:00"),
 			"files": [
 				"bink2w64.dll",
 				"common.rpf",
@@ -438,8 +438,8 @@ const FILES = {
 			],
 		},
 		"Enhanced": {
-			"version": "1.0.813.11",
-			"data_updated_at": new Date("2025-04-10T13:00:00+01:00"),
+			"version": "1.0.814.9",
+			"data_updated_at": new Date("2025-05-11T21:00:00+01:00"),
 			"files": [
 				"amd_ags_x64.dll",
 				"amd_fidelityfx_dx12.dll",
