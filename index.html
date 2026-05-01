@@ -170,7 +170,7 @@
         </div>
         <div class="gameEditions">
             <h2 id="Steam">Steam</h2>
-            <a href="#WWWidgetMailBtn"><em>You have this edition?</em> Contact me to contribute by providing the missing data</a>
+            <a href="mailto:contact@ssstuart.net" id="contactLink"><em>You have this edition?</em> Contact me to contribute by providing the missing data</a>
         </div>
 
 
@@ -313,6 +313,13 @@
                 summary.appendChild(fileCounter);
             }
         }
+
+        document.getElementById('contactLink').addEventListener('click', (e) => {
+            if (document.getElementById('WWWidgetContactBtn')) {
+                e.preventDefault();
+                document.getElementById('WWWidgetContactBtn').click();
+            }
+        });
 
         if (document.readyState != "complete") {
             window.addEventListener("load", () => {
