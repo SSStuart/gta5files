@@ -21,6 +21,7 @@ PlayGTAV.exe
 title.rgl
 uninstall.exe
 version.txt
+versioninfo.txt
 x64a.rpf
 x64b.rpf
 x64c.rpf
@@ -280,6 +281,10 @@ update\x64\dlcpacks\mp2024_01\dlc.rpf
 update\x64\dlcpacks\mp2024_01_g9ec\dlc.rpf
 update\x64\dlcpacks\mp2024_02\dlc.rpf
 update\x64\dlcpacks\mp2024_02_g9ec\dlc.rpf
+update\x64\dlcpacks\mp2025_01\dlc.rpf
+update\x64\dlcpacks\mp2025_01_G9EC\dlc.rpf
+update\x64\dlcpacks\mp2025_02\dlc.rpf
+update\x64\dlcpacks\mp2025_02_g9ec\dlc.rpf
 update\x64\dlcpacks\mpairraces\dlc.rpf
 update\x64\dlcpacks\mpapartment\dlc.rpf
 update\x64\dlcpacks\mpassault\dlc.rpf
@@ -327,6 +332,9 @@ update\x64\dlcpacks\patch2023_02\dlc.rpf
 update\x64\dlcpacks\patch2024_01\dlc.rpf
 update\x64\dlcpacks\patch2024_01_g9ec\dlc.rpf
 update\x64\dlcpacks\patch2024_02\dlc.rpf
+update\x64\dlcpacks\patch2025_01\dlc.rpf
+update\x64\dlcpacks\patch2025_02\dlc.rpf
+update\x64\dlcpacks\patch2025_02_g9ec\dlc.rpf
 update\x64\dlcpacks\patchday10ng\dlc.rpf
 update\x64\dlcpacks\patchday11ng\dlc.rpf
 update\x64\dlcpacks\patchday12ng\dlc.rpf

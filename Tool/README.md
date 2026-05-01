@@ -1,4 +1,4 @@
-`GTAfiles.raw.txt` : Le fichier généré (pour comparer)
+`RawFilesList/....txt` : Les fichiers générés (pour comparer)
 
 # Outils
 ## A partir d'un script python

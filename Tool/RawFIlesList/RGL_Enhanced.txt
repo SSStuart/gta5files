@@ -8,10 +8,12 @@ fvad.dll
 GFSDK_Aftermath_Lib.x64.dll
 GTA5_Enhanced.exe
 GTA5_Enhanced_BE.exe
+hashes.ini
 index.bin
 libcurl.dll
 libtox.dll
 nvngx_dlss.dll
+nvngx_dlssg.dll
 oo2core_5_win64.dll
 opus.dll
 opusenc.dll
@@ -19,9 +21,13 @@ PlayGTAV.exe
 rpf.cache
 sl.common.dll
 sl.dlss.dll
+sl.dlss_g.dll
 sl.interposer.dll
+sl.pcl.dll
+sl.reflex.dll
 title.rgl
 uninstall.exe
+versioninfo.txt
 x64a.rpf
 x64b.rpf
 x64c.rpf
@@ -284,6 +290,10 @@ update\x64\dlcpacks\mp2024_01\dlc.rpf
 update\x64\dlcpacks\mp2024_01_G9EC\dlc.rpf
 update\x64\dlcpacks\mp2024_02\dlc.rpf
 update\x64\dlcpacks\mp2024_02_G9EC\dlc.rpf
+update\x64\dlcpacks\mp2025_01\dlc.rpf
+update\x64\dlcpacks\mp2025_01_G9EC\dlc.rpf
+update\x64\dlcpacks\mp2025_02\dlc.rpf
+update\x64\dlcpacks\mp2025_02_G9EC\dlc.rpf
 update\x64\dlcpacks\mpAirraces\dlc.rpf
 update\x64\dlcpacks\mpApartment\dlc.rpf
 update\x64\dlcpacks\mpAssault\dlc.rpf
@@ -331,6 +341,9 @@ update\x64\dlcpacks\patch2023_02\dlc.rpf
 update\x64\dlcpacks\patch2024_01\dlc.rpf
 update\x64\dlcpacks\patch2024_01_G9EC\dlc.rpf
 update\x64\dlcpacks\patch2024_02\dlc.rpf
+update\x64\dlcpacks\patch2025_01\dlc.rpf
+update\x64\dlcpacks\patch2025_02\dlc.rpf
+update\x64\dlcpacks\patch2025_02_G9EC\dlc.rpf
 update\x64\dlcpacks\patchDay10NG\dlc.rpf
 update\x64\dlcpacks\patchDay11NG\dlc.rpf
 update\x64\dlcpacks\patchDay12NG\dlc.rpf
